@@ -62,7 +62,7 @@
         {
             optionsBuilder.UseSqlite("Data Source=" + pathToDb);
             // Enable logging to console
-            // optionsBuilder.UseLoggerFactory(GetLoggerFactory());
+            optionsBuilder.UseLoggerFactory(GetLoggerFactory());
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
