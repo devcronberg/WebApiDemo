@@ -21,3 +21,10 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --configuration Release --no-restore
+    - name: Publish
+      run: dotnet publish
+    - name: Upload WebApiDemo Build Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: WebApiDemo
+        path: /home/runner/work/WebApiDemo/WebApiDemo/WebApiDemo/bin/Debug/netcoreapp3.1/publish/
